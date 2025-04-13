@@ -1,0 +1,243 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Buildify Login</title>
+    <style>
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+
+        body {
+            background-color: #ffffff;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            min-height: 100vh;
+        }
+
+        .container {
+            display: flex;
+            flex: 1;
+            justify-content: space-around;
+            align-items: center;
+            padding: 50px;
+        }
+
+        .left {
+            flex: 1;
+            text-align: center;
+            transform: translateX(-12em);
+        }
+
+        .left h1 {
+            font-size: 4rem;
+            color: #222;
+        }
+
+        .left p {
+            font-size: 1.2rem;
+            margin-top: 10px;
+        }
+
+        .right {
+            flex: 1;
+            max-width: 400px;
+            transform: translateX(-14em);
+        }
+
+        .right h2 {
+            font-size: 2rem;
+            margin-bottom: 30px;
+            text-align: center;
+        }
+
+        label {
+            font-weight: bold;
+            display: block;
+            margin-bottom: 5px;
+        }
+
+        input[type="email"],
+        input[type="password"] {
+            width: 100%;
+            padding: 10px;
+            margin-bottom: 20px;
+            border: 1px solid #ccc;
+            background-color: #eee;
+        }
+
+        .hint {
+            font-size: 0.8rem;
+            color: gray;
+            margin-top: -15px;
+            margin-bottom: 10px;
+        }
+
+        button {
+            width: 100%;
+            padding: 12px;
+            background-color: #222;
+            color: white;
+            font-weight: bold;
+            border: none;
+            cursor: pointer;
+            margin-bottom: 15px;
+        }
+
+        .footer-links {
+            display: flex;
+            justify-content: center;
+            gap: 60px;
+            font-size: 0.9rem;
+        }
+
+        .footer-links a {
+            color: #007bff;
+            text-decoration: none;
+        }
+
+        .register {
+            text-align: center;
+            margin-top: 20px;
+            font-size: 0.9rem;
+        }
+
+        .register a {
+            color: #007bff;
+            text-decoration: none;
+        }
+
+        .input-label-group {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 5px;
+        }
+
+        .hint-inline {
+            font-size: 0.8rem;
+            color: gray;
+            font-weight: normal;
+        }
+
+        input:focus {
+            outline: none;
+            border-color: #007bff;
+            background-color: #fff;
+            box-shadow: 0 0 5px rgba(0, 123, 255, 0.5);
+            transition: 0.2s ease;
+        }
+
+        button:hover {
+            background-color: #000;
+            transform: scale(1.05);
+            box-shadow: 0 6px 20px rgba(0, 0, 0, 0.2);
+            transition: all 0.3s ease;
+        }
+
+        .footer-links a,
+        .register a {
+            position: relative;
+            text-decoration: none;
+        }
+
+        .footer-links a::after,
+        .register a::after {
+            content: '';
+            position: absolute;
+            bottom: -2px;
+            left: 0;
+            width: 0%;
+            height: 2px;
+            background: #007bff;
+            transition: width 0.3s;
+        }
+
+        .footer-links a:hover::after,
+        .register a:hover::after {
+            width: 100%;
+        }
+
+        @media (max-width: 800px) {
+        body {
+            justify-content: center;
+            align-items: center;
+        }
+
+        .container {
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            padding: 30px 20px;
+        }
+
+            .left,
+            .right {
+                width: 100%;
+                max-width: 400px;
+                margin-left: 0;
+                text-align: center;
+                transform: translateX(0.2em);
+            }
+
+            .left h1 {
+                font-size: 3rem;
+            }
+
+            .hint-inline {
+                font-size: 0.7rem;
+            }
+
+        }
+
+            footer {
+            text-align: center;
+            padding: 20px;
+            font-size: 0.9rem;
+            color: #555;
+        }
+    </style>
+</head>
+<body>
+<div class="container">
+    <div class="left">
+        <h1>Title</h1>
+        <p>Slogan</p>
+    </div>
+    <div class="right">
+        <h2>Login</h2>
+        <form>
+            <div class="input-label-group">
+                <label for="email">Email</label>
+                <span class="hint-inline">(Please enter a valid email format)</span>
+            </div>
+            <input type="email" id="email" placeholder="example@email.com" required>
+
+            <div class="input-label-group">
+                <label for="password">Password</label>
+                <span class="hint-inline">(8~15 characters)</span>
+            </div>
+            <input type="password" id="password" placeholder="Enter your password" required>
+
+            <button type="submit">Log In</button>
+            <div class="footer-links">
+                <a href="#">Find ID</a>
+                <a href="#">Find Password</a>
+            </div>
+            <div class="register">
+                Don't have an account? <a href="#">Sign up</a>
+            </div>
+        </form>
+    </div>
+</div>
+
+<footer>
+     2025 WareFlow Co. All rights reserved ©
+</footer>
+</body>
+</html>

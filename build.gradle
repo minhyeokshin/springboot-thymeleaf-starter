@@ -1,0 +1,85 @@
+// Gradle build script for Spring Boot project with Thymeleaf (스프링부트 + 타임리프 프로젝트용 빌드 스크립트)
+// Includes dependencies for Spring Security, JPA, MyBatis, Validation, Mail, and OpenAPI documentation.
+// (스프링 시큐리티, JPA, 마이바티스, 유효성 검사, 메일, OpenAPI 문서화 관련 의존성 포함)
+
+// Apply necessary Gradle plugins for Java and Spring Boot
+// (자바 및 스프링부트에 필요한 플러그인 설정)
+plugins {
+	id 'java'
+	id 'org.springframework.boot' version '3.4.4'
+	id 'io.spring.dependency-management' version '1.1.7'
+}
+
+// Project group and version
+// (프로젝트 그룹 및 버전 설정)
+group = 'com.springboot'
+version = '0.0.1-SNAPSHOT'
+
+// Set Java toolchain to use Java 17
+// (자바 17 버전으로 툴체인 설정)
+java {
+	toolchain {
+		languageVersion = JavaLanguageVersion.of(17)
+	}
+}
+
+// Define repository for dependency resolution
+// (라이브러리 의존성 해결을 위한 저장소 설정)
+repositories {
+	mavenCentral()
+}
+
+// Project dependencies
+// (프로젝트 의존성 설정)
+dependencies {
+	// Spring Boot starters for web, security, JPA, validation, mail, and Thymeleaf
+	// (웹, 보안, JPA, 유효성검사, 메일, 타임리프용 스타터 의존성)
+	implementation 'org.springframework.boot:spring-boot-starter-data-jpa'
+	implementation 'org.springframework.boot:spring-boot-starter-mail'
+	implementation 'org.springframework.boot:spring-boot-starter-security'
+	implementation 'org.springframework.boot:spring-boot-starter-thymeleaf'
+	implementation 'org.springframework.boot:spring-boot-starter-validation'
+	implementation 'org.springframework.boot:spring-boot-starter-web'
+
+	// Thymeleaf extensions
+	// (타임리프 확장 라이브러리)
+	implementation 'org.thymeleaf.extras:thymeleaf-extras-springsecurity6'
+	implementation 'nz.net.ultraq.thymeleaf:thymeleaf-layout-dialect'
+
+	// Lombok for reducing boilerplate code
+	// (롬복 - 반복되는 코드 제거용)
+	compileOnly 'org.projectlombok:lombok'
+	// Lombok for annotation processing
+	// (롬복 어노테이션 프로세서)
+	annotationProcessor 'org.projectlombok:lombok'
+
+	// Development tools for hot reloading
+	// (개발 시 핫리로드 도구)
+	developmentOnly 'org.springframework.boot:spring-boot-devtools'
+
+	// Database connectors
+	// (데이터베이스 커넥터)
+	runtimeOnly 'com.mysql:mysql-connector-j'
+	runtimeOnly 'com.h2database:h2'
+
+	// Testing dependencies
+	// (테스트 관련 의존성)
+	testImplementation 'org.springframework.boot:spring-boot-starter-test'
+	testImplementation 'org.springframework.security:spring-security-test'
+	testRuntimeOnly 'org.junit.platform:junit-platform-launcher'
+
+	// MyBatis for SQL mapping
+	// (SQL 매핑용 마이바티스)
+	implementation 'org.mybatis.spring.boot:mybatis-spring-boot-starter:3.0.3'
+	implementation 'org.mybatis:mybatis:3.5.15'
+
+	// OpenAPI documentation for REST API
+	// (REST API 문서 생성을 위한 OpenAPI)
+	implementation 'org.springdoc:springdoc-openapi-starter-webmvc-ui:2.5.0'
+}
+
+// Configure test framework to use JUnit Platform
+// (JUnit 플랫폼 기반 테스트 설정)
+tasks.named('test') {
+	useJUnitPlatform()
+}

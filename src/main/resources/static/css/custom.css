@@ -1,0 +1,219 @@
+.sidebar-img{
+    height: 9em !important;
+    width: 12em !important;
+}
+
+/* ===== 다크모드 전체 ===== */
+.dark-mode {
+    background-color: #1f1f1f !important;
+    color: #eeeeee !important;
+}
+
+/* 레이아웃 기본 배경 */
+.dark-mode .wrapper,
+.dark-mode .main,
+.dark-mode .content,
+.dark-mode .container-fluid,
+.dark-mode .row,
+.dark-mode .col-12 {
+    background-color: #121212 !important;
+    color: #eeeeee !important;
+}
+
+/* 카드 */
+.dark-mode .card,
+.dark-mode .card-header {
+    background-color: #1e1e28 !important;
+    color: #eeeeee !important;
+}
+
+/* 버튼 */
+.dark-mode .btn-light {
+    background-color: #292937 !important;
+    color: #eeeeee !important;
+    border-color: #373747 !important;
+}
+.dark-mode .btn-light:hover {
+    background-color: #373747 !important;
+    border-color: #444455 !important;
+}
+
+/* 드롭다운 */
+.dark-mode .dropdown-menu {
+    background-color: #1f1f1f !important;
+    color: #eeeeee !important;
+}
+.dark-mode .dropdown-item {
+    background-color: #1f1f1f !important;
+    color: #eeeeee !important;
+}
+.dark-mode .dropdown-item:hover {
+    background-color: #333344 !important;
+}
+
+/* 코드 블록 */
+.dark-mode pre,
+.dark-mode code {
+    background-color: #1e1e28 !important;
+    color: #ffcc99 !important;
+}
+
+/* 사이드바 */
+.dark-mode .sidebar {
+    background-color: #121212 !important;
+    background-image: none !important;
+}
+
+/* 사이드바 CTA */
+.dark-mode .sidebar-cta {
+    background-color: #1f1f1f !important;
+    background-image: none !important;
+    color: #eeeeee !important;
+}
+
+/* 사이드바 항목 */
+.dark-mode .sidebar-item {
+    background-color: transparent !important;
+    color: #dddddd !important;
+}
+.dark-mode .sidebar-item:hover {
+    background-color: #1e1e28 !important;
+}
+
+/* 사이드바 활성 항목 */
+.dark-mode .sidebar-item.active {
+    background-color: #2a2a3d !important;
+    color: #ffffff !important;
+}
+
+/* 사이드바 텍스트 */
+.dark-mode .sidebar-header {
+    background-color: #1f1f1f !important;
+    color: #cccccc !important;
+}
+.dark-mode .sidebar-brand{
+    background-color: #1f1f1f !important;
+    color: #ffffff !important;
+}
+
+.dark-mode .sidebar-nav{
+    background-color: #1f1f1f !important;
+    color: #ffffff !important;
+}
+
+.dark-mode .sidebar-dropdown.list-unstyled.ps-4.collapse.show{
+    background-color: #1f1f1f !important;
+    color: #ffffff !important;
+}
+
+.dark-mode .sidebar-link {
+    background-color: #1f1f1f !important;
+    color: #dddddd !important;
+}
+.dark-mode .sidebar-link.collapsed.d-flex.justify-content-between.align-items-center {
+    background-color: #1f1f1f !important;
+    color: #dddddd !important;
+}
+
+/* 일반 텍스트 통일 */
+.dark-mode h1,
+.dark-mode h2,
+.dark-mode h3,
+.dark-mode h4,
+.dark-mode h5,
+.dark-mode h6,
+.dark-mode p,
+.dark-mode span,
+.dark-mode strong,
+.dark-mode a,
+.dark-mode li,
+.dark-mode label {
+    color: #eeeeee !important;
+}
+
+/* 기타 텍스트 */
+.dark-mode .text-dark {
+    color: #ffffff !important;
+}
+.dark-mode .text-muted {
+    color: #aaaaaa !important;
+}
+
+/* 리스트 아이템 */
+.dark-mode .list-group-item {
+    background-color: #1f1f1f !important;
+    color: #eeeeee !important;
+}
+
+/* 사이드바 컨테이너 전체 배경 */
+.dark-mode .sidebar-content,
+.dark-mode .simplebar-wrapper,
+.dark-mode .simplebar-height-auto-observer-wrapper,
+.dark-mode .simplebar-mask,
+.dark-mode .simplebar-offset,
+.dark-mode .simplebar-content-wrapper,
+.dark-mode .simplebar-content,
+.dark-mode .simplebar-placeholder {
+    background-color: #121212 !important;
+}
+
+/* 스크롤바 트랙 */
+.dark-mode .simplebar-track.simplebar-vertical,
+.dark-mode .simplebar-track.simplebar-horizontal {
+    background-color: #171721 !important;
+}
+
+/* Feather 아이콘 다크모드 대응 */
+.dark-mode .sidebar-item i,
+.dark-mode .sidebar-item svg,
+.dark-mode .sidebar-link i,
+.dark-mode .sidebar-link svg,
+.dark-mode .sidebar-link [data-feather],
+.dark-mode [data-feather] {
+    stroke: #dddddd !important;
+    color: #dddddd !important;
+    fill: none !important;
+}
+
+/* 활성 상태에서 아이콘 강조 */
+.dark-mode .sidebar-item.active i,
+.dark-mode .sidebar-item.active svg,
+.dark-mode .sidebar-link.active i,
+.dark-mode .sidebar-link.active svg,
+.dark-mode .sidebar-item.active svg.feather,
+.dark-mode .sidebar-link.active svg.feather {
+    stroke: #ffffff !important;
+    color: #ffffff !important;
+}
+
+/* Footer */
+.dark-mode .footer {
+    background-color: #121212 !important;
+    color: #eeeeee !important;
+}
+
+/* Navbar 배경색 변경 */
+.dark-mode .navbar.navbar-expand.navbar-light.navbar-bg {
+    background-color: slategrey !important;
+}
+
+.wrapper {
+    display: flex !important;
+}
+
+.sidebar {
+    width: 250px !important;
+}
+
+.main {
+    flex-grow: 1 !important;
+}
+
+/*main.content {*/
+/*    background: red !important;*/
+/*    min-height: 300px !important;*/
+/*    padding: 3rem !important;*/
+/*    display: block !important;*/
+/*    color: black !important;*/
+/*    font-size: 20px !important;*/
+/*}*/

@@ -1,0 +1,48 @@
+<!-- Default layout template for admin pages -->
+<!-- (관리자 페이지용 기본 레이아웃 템플릿) -->
+<!DOCTYPE html>
+<!-- Configuration fragment (includes meta tags, styles, etc.) -->
+<!-- (메타 태그, 스타일 등을 포함한 설정 프래그먼트) -->
+<html xmlns:th="http://www.thymeleaf.org"
+      xmlns:layout="http://www.ultraq.net.nz/thymeleaf/layout">
+<head>
+    <div th:replace="~{admin/common/fragments/config :: ConfigFragment}"></div>
+</head>
+<body>
+<!-- Main wrapper for layout structure -->
+<!-- (전체 레이아웃 구조를 감싸는 wrapper) -->
+<div class="wrapper">
+    <!-- Sidebar fragment -->
+    <!-- (사이드바 프래그먼트) -->
+    <div th:replace="~{admin/common/fragments/sidebar :: sidebarFragment}"></div>
+    <div class="main">
+        <!-- Header fragment -->
+        <!-- (헤더 프래그먼트) -->
+        <div th:replace="~{admin/common/fragments/header :: headerFragment}"></div>
+        <!-- Main content area for dynamic content -->
+        <!-- (동적으로 삽입될 메인 콘텐츠 영역) -->
+        <main class="content" layout:fragment="content">
+
+        </main>
+    </div>
+</div>
+<!-- Footer fragment -->
+<!-- (푸터 프래그먼트) -->
+<div th:replace="~{admin/common/fragments/footer :: footerFragment}"></div>
+<script>
+    document.addEventListener("DOMContentLoaded", function () {
+        // Replace icons using Feather library if available
+        // (Feather 아이콘 라이브러리가 로드되어 있다면 아이콘 대체)
+        if (typeof feather !== 'undefined') {
+            feather.replace();
+        }
+    });
+</script>
+<!-- Bootstrap JS bundle -->
+<!-- (부트스트랩 JS 번들) -->
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+<!-- Custom JS -->
+<!-- (사용자 정의 JS) -->
+<script th:src="@{/js/app.js}"></script>
+</body>
+</html>

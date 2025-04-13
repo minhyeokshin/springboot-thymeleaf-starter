@@ -1,0 +1,44 @@
+<!-- Config fragment for HTML head settings -->
+<!-- (HTML head 설정을 위한 설정 프래그먼트) -->
+<th:block th:fragment="ConfigFragment">
+    <!-- Meta tags for browser compatibility and responsiveness -->
+    <!-- (브라우저 호환성 및 반응형을 위한 메타 태그) -->
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="Responsive Admin &amp; Dashboard Template based on Bootstrap 5">
+    <meta name="author" content="AdminKit">
+    <meta name="keywords" content="adminkit, bootstrap, bootstrap 5, admin, dashboard, template, responsive, css, sass, html, theme, front-end, ui kit, web">
+
+    <!-- Preload and favicon settings -->
+    <!-- (폰트 사전 연결 및 파비콘 설정) -->
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link rel="shortcut icon" th:href="@{/img/icons/icon-48x48.png}" />
+
+    <!-- Canonical URL to avoid SEO duplication -->
+    <!-- (SEO 중복 방지를 위한 정규화 링크) -->
+    <link rel="canonical" href="https://demo-basic.adminkit.io/pages-blank.html" />
+
+    <!-- HTML page title -->
+    <!-- (HTML 페이지 제목) -->
+    <title>Insert Title</title>
+    <!-- Load dark mode if enabled in localStorage -->
+    <!-- (localStorage에 설정된 다크모드 적용) -->
+    <script>
+        window.addEventListener("DOMContentLoaded", function() {
+            if (localStorage.getItem("darkMode") === "enabled") {
+                document.documentElement.classList.add("dark-mode");
+            }
+        });
+    </script>
+
+    <!-- Main CSS -->
+    <!-- (기본 스타일 시트) -->
+    <link th:href="@{/css/app.css}" rel="stylesheet">
+    <!-- Custom CSS -->
+    <!-- (사용자 정의 스타일 시트) -->
+    <link th:href="@{/css/custom.css}" rel="stylesheet">
+    <!-- Google Fonts -->
+    <!-- (구글 폰트) -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600&display=swap" rel="stylesheet">
+</th:block>

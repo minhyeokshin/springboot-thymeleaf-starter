@@ -1,0 +1,67 @@
+# ========================
+# 📦 기본 무시 파일
+# ========================
+*.class
+*.log
+*.tmp
+*.bak
+*.swp
+*.swo
+.DS_Store
+Thumbs.db
+
+# ========================
+# 🔐 민감 정보
+# ========================
+application-secret.properties
+application.yml
+
+# ========================
+# ⚙️ Gradle 관련
+# ========================
+.gradle/
+build/
+!gradle/wrapper/gradle-wrapper.jar
+!**/src/main/**/build/
+!**/src/test/**/build/
+
+# ========================
+# 🧰 STS (Spring Tool Suite)
+# ========================
+.apt_generated/
+.classpath
+.factorypath
+.project
+.settings/
+.springBeans
+.sts4-cache/
+bin/
+!**/src/main/**/bin/
+!**/src/test/**/bin/
+
+# ========================
+# 💡 IntelliJ IDEA
+# ========================
+.idea/
+*.iws
+*.iml
+*.ipr
+
+# ========================
+# 🧪 NetBeans
+# ========================
+/nbproject/private/
+/nbbuild/
+/dist/
+/nbdist/
+/.nb-gradle/
+
+# ========================
+# 🧑‍💻 VS Code
+# ========================
+.vscode/
+
+# ========================
+# 📄 기타 문서
+# ========================
+HELP.md
